@@ -171,10 +171,14 @@ const t = (key) => (T[lang] && T[lang][key]) || T.zh[key] || key;
 function applyLang() {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   document.querySelectorAll('[data-i18n]').forEach((el) => {
-    el.textContent = t(el.getAttribute('data-i18n'));
+    const k = el.getAttribute('data-i18n');
+    const v = (T[lang] && T[lang][k]) || T.zh[k];
+    if (v) el.textContent = v;
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
-    el.setAttribute('placeholder', t(el.getAttribute('data-i18n-placeholder')));
+    const k = el.getAttribute('data-i18n-placeholder');
+    const v = (T[lang] && T[lang][k]) || T.zh[k];
+    if (v) el.setAttribute('placeholder', v);
   });
   const toggle = document.getElementById('langToggle');
   toggle.textContent = lang === 'zh' ? 'EN' : '中';
