@@ -334,6 +334,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media print {
   .nav, .lang-toggle, .hamburger, .skip-link,
   .hero-actions, .hero-chips, .hero-photo, .tool, .footer { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
   body { background: #fff !important; color: #000 !important; font-size: 10.5pt; line-height: 1.6; }
   .container { max-width: 100%; padding: 0; }
   .section, .hero { padding: 12px 0; }

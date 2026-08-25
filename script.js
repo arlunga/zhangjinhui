@@ -11,7 +11,7 @@ const T = {
     "hero.tagline": "用声音传递温度，用 AI 让成长可见",
     "hero.location": "深圳 · Shenzhen", "hero.experience": "4 年口才教学经验",
     "hero.ai": "AI 赋能口才教学", "hero.cta": "联系我", "hero.cta2": "看看我的 AI 教学",
-    "hero.download": "下载简历 PDF",
+    "hero.download": "下载简历 PDF", "hero.print": "下载 PDF 简历",
     "hero.course1": "少儿口才", "hero.course2": "即兴口语", "hero.course3": "小主持", "hero.course4": "朗诵", "hero.course5": "AI 教学",
 
     "about.eyebrow": "关于我 / About", "about.title": "一段声音，一份耐心",
@@ -91,7 +91,7 @@ const T = {
     "hero.tagline": "Warming hearts with voice, making growth visible with AI",
     "hero.location": "Shenzhen, China", "hero.experience": "4 years of speech-teaching",
     "hero.ai": "AI-enhanced speech coaching", "hero.cta": "Contact Me", "hero.cta2": "See My AI Teaching",
-    "hero.download": "Download Resume",
+    "hero.download": "Download Resume", "hero.print": "Download PDF Resume",
     "hero.course1": "Children's Eloquence", "hero.course2": "Impromptu Speaking", "hero.course3": "Little Host", "hero.course4": "Recitation", "hero.course5": "AI Teaching",
 
     "about.eyebrow": "About", "about.title": "A warm voice, a patient heart",
@@ -311,6 +311,9 @@ document.getElementById('toolClear').addEventListener('click', () => {
   document.getElementById('toolOutput').hidden = true;
   lastResult = null;
 });
+
+/* ============ 打印 / 另存 PDF ============ */
+document.getElementById('printBtn').addEventListener('click', () => window.print());
 
 /* ============ 语音输入（Web Speech API，无需后端） ============ */
 const micBtn = document.getElementById('toolMic');
