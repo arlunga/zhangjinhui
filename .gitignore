@@ -1,0 +1,7 @@
+# 个人隐私：照片与简历 PDF 暂不公开，勿提交到公开仓库
+# 需要公开时，删除以下两行即可
+assets/photo.png
+assets/*.pdf
+
+# macOS 系统文件
+.DS_Store
