@@ -329,3 +329,26 @@ ul { margin: 0; padding: 0; list-style: none; }
   .section, .hero { padding: 52px 0; }
   .tool { padding: 22px; }
 }
+
+/* ============ 打印（可直接另存為 PDF 履歷） ============ */
+@media print {
+  .nav, .lang-toggle, .hamburger, .skip-link,
+  .hero-actions, .hero-chips, .hero-photo, .tool, .footer { display: none !important; }
+  body { background: #fff !important; color: #000 !important; font-size: 10.5pt; line-height: 1.6; }
+  .container { max-width: 100%; padding: 0; }
+  .section, .hero { padding: 12px 0; }
+  .section-tint, .section-ai { background: #fff !important; }
+  .card, .timeline-card, .edu-card, .cred-card, .contact-card {
+    box-shadow: none !important; border: 1px solid #ddd !important;
+    background: #fff !important; break-inside: avoid;
+  }
+  .card-icon { background: #f5f5f5 !important; }
+  .hero-grid { grid-template-columns: 1fr; gap: 4px; }
+  .hero-name { font-size: 22pt; }
+  .timeline { padding-left: 0; }
+  .timeline::before, .timeline-dot { display: none; }
+  .timeline-item { margin-bottom: 14px; }
+  .cards, .cred-grid, .contact-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .job-achievement { background: #fafafa; border-color: #ddd; }
+  a { text-decoration: none; color: #000; }
+}
